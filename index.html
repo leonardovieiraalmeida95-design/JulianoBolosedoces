@@ -1,0 +1,832 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juliano Bolos e Doces</title>
+<meta name="description" content="Bolos personalizados, bolos de comemoração e docinhos para festas em Jaguariaíva, PR. Encomendas sob consulta pelo WhatsApp.">
+<meta name="theme-color" content="#0f2247">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="apple-touch-icon" href="img/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Juliano Bolos e Doces">
+<meta property="og:description" content="Bolos personalizados e docinhos para festas em Jaguariaíva, PR. Solicite seu orçamento pelo WhatsApp.">
+<meta property="og:locale" content="pt_BR">
+<!-- Depois de publicar, adicione com o endereço real do site (o Open Graph exige URL completa):
+<meta property="og:url" content="https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/">
+<meta property="og:image" content="https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/img/bolo-lirio.jpg">
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
+<style>
+:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+[hidden]{display:none!important}
+</style>
+<style>
+/* Layout: página única em fluxo vertical (entrada, meio, saída). Hero dividido texto/foto, seções em faixas alternadas, fechamento em faixa azul-marinho. */
+:root {
+  --bg: #fbfbfd;
+  --bg-alt: #f0f2f7;
+  --ink: #0e1a33;
+  --ink-2: #4a566e;
+  --line: #dde2ec;
+  --navy: #0f2247;
+  --btn-bg: #0f2247;
+  --btn-fg: #ffffff;
+  --gold: #8a6a3b;
+  --ph-bg-a: #e4e9f3;
+  --ph-bg-b: #cfd7e8;
+  --ph-fg: #0f2247;
+  --cta-bg: #0f2247;
+  --cta-fg: #ffffff;
+  --cta-ink-2: #b9c4dc;
+  --focus: #1d4ed8;
+  --font-display: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 14px;
+  --gutter: 16px;
+  --maxw: 1120px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0a1226; --bg-alt: #0f1a33; --ink: #eef1f8; --ink-2: #a7b2c9; --line: #22304f;
+    --navy: #e9edf7; --btn-bg: #eef1f8; --btn-fg: #0a1226; --gold: #d2b07a;
+    --ph-bg-a: #13213f; --ph-bg-b: #1b2d55; --ph-fg: #9fb2dc;
+    --cta-bg: #12234a; --cta-fg: #ffffff; --cta-ink-2: #b9c4dc; --focus: #8fb0ff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0a1226; --bg-alt: #0f1a33; --ink: #eef1f8; --ink-2: #a7b2c9; --line: #22304f;
+  --navy: #e9edf7; --btn-bg: #eef1f8; --btn-fg: #0a1226; --gold: #d2b07a;
+  --ph-bg-a: #13213f; --ph-bg-b: #1b2d55; --ph-fg: #9fb2dc;
+  --cta-bg: #12234a; --cta-fg: #ffffff; --cta-ink-2: #b9c4dc; --focus: #8fb0ff;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.55;
+  padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--gutter), env(safe-area-inset-right, 0px));
+  padding-block: 0;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  z-index: 60; background: var(--bg);
+}
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3 { text-wrap: balance; margin: 0; font-weight: 500; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 6px; }
+
+.wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; }
+.band { margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px)));
+        padding-left: max(var(--gutter), env(safe-area-inset-left, 0px));
+        padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
+section { padding-block: clamp(64px, 10vw, 120px); }
+
+.eyebrow {
+  font-size: 12.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold);
+}
+.display { font-family: var(--font-display); letter-spacing: -.015em; line-height: 1.05; }
+.h-section { font-family: var(--font-display); font-size: clamp(32px, 5.2vw, 52px); letter-spacing: -.015em; line-height: 1.08; }
+.lead { font-size: clamp(17px, 2vw, 20px); color: var(--ink-2); max-width: 56ch; }
+.sec-head { display: grid; gap: 14px; margin-bottom: clamp(32px, 5vw, 56px); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 0 24px; border-radius: 999px; border: 1.5px solid transparent;
+  font: 600 16px/1 var(--font-body); text-decoration: none; cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.btn:active { transform: scale(.98); }
+.btn-primary { background: var(--btn-bg); color: var(--btn-fg); }
+.btn-primary:hover { opacity: .9; }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn-sm { min-height: 40px; padding: 0 18px; font-size: 15px; }
+.btn-light { background: #fff; color: #0f2247; }
+.btn-light:hover { opacity: .92; }
+.btn-outline-light { background: transparent; color: var(--cta-fg); border-color: rgba(255,255,255,.35); }
+.btn-outline-light:hover { border-color: #fff; }
+.link-arrow { font-weight: 600; text-decoration: none; border-bottom: 1.5px solid var(--line); padding-bottom: 2px; }
+.link-arrow:hover { border-color: var(--ink); }
+
+/* Demo strip */
+.demo-strip {
+  background: var(--navy); color: var(--btn-fg); font-size: 13px; text-align: center; padding: 8px 12px;
+  margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px)));
+}
+.demo-strip[hidden] { display: none; }
+
+/* Header */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(14px); -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid var(--line);
+  margin-inline: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px)));
+  padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px));
+}
+.header-in { max-width: var(--maxw); margin-inline: auto; min-height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.brand .logo { width: 42px; height: 42px; border-radius: 50%; flex: none; box-shadow: 0 0 0 1px var(--line); }
+.brand .bt { display: flex; flex-direction: column; line-height: 1.1; }
+.brand .bt b { font-family: var(--font-display); font-weight: 500; font-size: 21px; letter-spacing: -.01em; }
+.brand .bt i { font-style: normal; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); }
+footer .brand .logo { width: 56px; height: 56px; }
+.nav { display: none; gap: 28px; }
+.nav a { text-decoration: none; font-size: 15px; color: var(--ink-2); font-weight: 500; }
+.nav a:hover { color: var(--ink); }
+.header-actions { display: flex; align-items: center; gap: 8px; }
+.menu-btn { min-height: 40px; min-width: 40px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; font: 600 14px var(--font-body); padding: 0 14px; }
+.mobile-nav { display: none; padding: 8px 0 16px; border-top: 1px solid var(--line); }
+.mobile-nav.open { display: grid; }
+.mobile-nav a { padding: 12px 0; text-decoration: none; font-weight: 500; border-bottom: 1px solid var(--line); }
+@media (min-width: 860px) {
+  .nav { display: flex; }
+  .menu-btn, .mobile-nav { display: none !important; }
+}
+
+/* Placeholders de foto */
+.photo { position: relative; overflow: hidden; border-radius: var(--radius); background: linear-gradient(160deg, var(--ph-bg-a), var(--ph-bg-b)); isolation: isolate; }
+.photo > img, .photo > svg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo .ph-tag {
+  position: absolute; left: 12px; bottom: 12px; z-index: 2;
+  background: color-mix(in srgb, var(--bg) 82%, transparent); color: var(--ink-2);
+  font-size: 11.5px; font-weight: 600; letter-spacing: .04em; padding: 5px 10px; border-radius: 999px;
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+
+/* Hero */
+.hero { padding-block: clamp(36px, 6vw, 72px) clamp(56px, 8vw, 96px); }
+.hero-grid { display: grid; gap: 36px; align-items: center; }
+.hero h1 { font-size: clamp(42px, 8.6vw, 84px); margin-block: 14px 20px; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-note { margin-top: 18px; font-size: 14.5px; color: var(--ink-2); }
+.hero .photo { aspect-ratio: 4 / 5; max-height: 78vh; width: 100%; }
+.scroll-hint { display: inline-flex; flex-direction: column; align-items: center; gap: 6px; margin-top: 44px; text-decoration: none; color: var(--ink-2); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; }
+.scroll-hint i { width: 1px; height: 36px; background: linear-gradient(var(--ink-2), transparent); display: block; animation: drop 2s ease-in-out infinite; transform-origin: top; }
+@keyframes drop { 0%, 100% { transform: scaleY(.5); opacity: .5; } 50% { transform: scaleY(1); opacity: 1; } }
+@media (min-width: 860px) {
+  .hero-grid { grid-template-columns: 1.1fr .9fr; gap: 64px; }
+}
+
+/* Categorias */
+.alt { background: var(--bg-alt); }
+.cat-grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .cat-grid { grid-template-columns: repeat(4, 1fr); } }
+.cat { display: grid; gap: 16px; align-content: start; }
+.cat .photo { aspect-ratio: 4 / 5; }
+.cat h3 { font-family: var(--font-display); font-size: 26px; letter-spacing: -.01em; line-height: 1.1; }
+.cat p { color: var(--ink-2); font-size: 15.5px; }
+.cat .tag { font-size: 12px; font-weight: 600; letter-spacing: .06em; color: var(--gold); text-transform: uppercase; }
+.cat-actions { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+
+/* Portfólio */
+/* Grade editorial: colunas desencontradas, fotos em proporção própria, alinhadas pela base */
+.grid-port { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; align-items: end; }
+.port-item { padding: 0; border: 0; cursor: zoom-in; border-radius: var(--radius); display: block; width: 100%; background: none; position: relative; min-width: 0; }
+.port-item .photo { width: 100%; transition: transform .25s ease; }
+.port-item:hover .photo { transform: scale(.985); }
+.port-item .cap { position: absolute; left: 12px; right: 12px; bottom: 12px; z-index: 3; text-align: left; font-size: 12.5px; font-weight: 600; line-height: 1.3; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,.6); opacity: 0; transition: opacity .2s; }
+.port-item:hover .cap, .port-item:focus-visible .cap { opacity: 1; }
+.port-item::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); background: linear-gradient(transparent 55%, rgba(6,12,28,.55)); opacity: 0; transition: opacity .2s; pointer-events: none; }
+.port-item:hover::after, .port-item:focus-visible::after { opacity: 1; }
+.port-item:nth-child(even) { margin-bottom: 0; }
+@media (min-width: 860px) {
+  .grid-port { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .port-item:nth-child(4n+2), .port-item:nth-child(4n+4) { transform: translateY(-28px); }
+  .grid-port { padding-top: 28px; }
+}
+@media (hover: none) { .port-item .cap, .port-item::after { display: none; } }
+.port-foot { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; color: var(--ink-2); font-size: 15px; }
+
+/* Lightbox */
+.lb { position: fixed; inset: 0; z-index: 100; background: rgba(6, 12, 28, .88); display: none; align-items: center; justify-content: center; padding: 20px max(16px, env(safe-area-inset-right, 0px)) 20px max(16px, env(safe-area-inset-left, 0px)); }
+.lb.open { display: flex; }
+.lb-box { width: min(92vw, 560px); display: grid; gap: 14px; }
+.lb-box .photo { aspect-ratio: 4 / 5; max-height: 74vh; width: 100%; }
+.lb-cap { color: #fff; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.lb-cap span { font-size: 15px; }
+.lb-btn { min-height: 44px; min-width: 44px; border-radius: 999px; border: 1.5px solid rgba(255,255,255,.4); background: transparent; color: #fff; cursor: pointer; font: 600 15px var(--font-body); padding: 0 16px; }
+.lb-btn:hover { border-color: #fff; }
+.lb-nav { display: flex; gap: 8px; }
+.lb :focus-visible { outline-color: #8fb0ff; }
+
+/* Personalização */
+.pers-grid { display: grid; gap: 40px; align-items: start; }
+@media (min-width: 900px) { .pers-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.checklist { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 0; }
+.checklist li { padding: 16px 0; border-top: 1px solid var(--line); display: grid; grid-template-columns: 120px 1fr; gap: 12px; }
+.checklist li:last-child { border-bottom: 1px solid var(--line); }
+.checklist b { font-weight: 600; }
+.checklist span { color: var(--ink-2); font-size: 15.5px; }
+.builder { background: var(--bg); border: 1px solid var(--line); border-radius: 20px; padding: clamp(20px, 4vw, 32px); display: grid; gap: 18px; }
+.builder h3 { font-family: var(--font-display); font-size: 28px; letter-spacing: -.01em; }
+.field { display: grid; gap: 7px; }
+.field label, .field .lbl { font-size: 13px; font-weight: 600; color: var(--ink-2); letter-spacing: .02em; }
+.field input, .field select {
+  width: 100%; min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1.5px solid var(--line);
+  background: var(--bg); color: var(--ink); font: 500 16px var(--font-body);
+}
+.field input:hover, .field select:hover { border-color: var(--ink-2); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1.5px solid var(--line); background: transparent; color: var(--ink); font: 500 15px var(--font-body); cursor: pointer; }
+.chip:hover { border-color: var(--ink-2); }
+.chip[aria-pressed="true"] { background: var(--btn-bg); color: var(--btn-fg); border-color: var(--btn-bg); }
+.two { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 520px) { .two { grid-template-columns: 1fr 1fr; } }
+.preview { font-size: 14.5px; color: var(--ink-2); background: var(--bg-alt); border-radius: 12px; padding: 14px 16px; min-width: 0; overflow-wrap: anywhere; }
+.preview b { display: block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+.fine { font-size: 13px; color: var(--ink-2); }
+
+/* Processo */
+.steps { display: grid; gap: 0; list-style: none; padding: 0; margin: 0; counter-reset: s; }
+@media (min-width: 860px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 40px; } }
+.step { padding: 28px 0; border-top: 1px solid var(--line); display: grid; gap: 12px; align-content: start; }
+.step .n { font-family: var(--font-display); font-style: italic; font-size: 44px; color: var(--gold); line-height: 1; }
+.step h3 { font-family: var(--font-display); font-size: 26px; letter-spacing: -.01em; }
+.step p { color: var(--ink-2); }
+
+/* Confiança */
+.trust-grid { display: grid; gap: 40px; }
+@media (min-width: 900px) { .trust-grid { grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; } }
+.trust .photo { aspect-ratio: 5 / 4; }
+.pillars { display: grid; gap: 22px; margin-top: 28px; }
+.pillar b { display: block; font-weight: 600; margin-bottom: 2px; }
+.pillar span { color: var(--ink-2); font-size: 15.5px; }
+.quotes { display: grid; gap: 20px; margin-top: 28px; }
+.quotes blockquote { margin: 0; padding-left: 18px; border-left: 2px solid var(--gold); }
+.quotes cite { display: block; margin-top: 8px; font-size: 14px; color: var(--ink-2); font-style: normal; }
+
+/* FAQ */
+.faq { max-width: 780px; }
+.faq details { border-top: 1px solid var(--line); }
+.faq details:last-child { border-bottom: 1px solid var(--line); }
+.faq summary { list-style: none; cursor: pointer; padding: 22px 0; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-weight: 600; font-size: 18px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-family: var(--font-display); font-size: 28px; line-height: 1; color: var(--gold); transition: transform .2s; flex: none; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq .ans { padding: 0 0 22px; color: var(--ink-2); max-width: 62ch; }
+
+/* Fechamento */
+.final { background: var(--cta-bg); color: var(--cta-fg); }
+.final-grid { display: grid; gap: 40px; align-items: center; }
+@media (min-width: 900px) { .final-grid { grid-template-columns: 1.05fr .95fr; gap: 72px; } }
+.final .eyebrow { color: #d9bd8f; }
+.final h2 { font-size: clamp(38px, 6.4vw, 68px); margin-block: 14px 18px; }
+.final p.lead { color: var(--cta-ink-2); }
+.final .photo { aspect-ratio: 4 / 5; max-height: 70vh; width: 100%; --ph-bg-a: #1a2f5c; --ph-bg-b: #274078; --ph-fg: #a9bde8; }
+.final .photo .ph-tag { background: rgba(10,18,38,.7); color: #c7d2ee; }
+.final-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.final-links { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 26px; }
+.final-links a, .final-links button { color: var(--cta-fg); background: none; border: 0; padding: 0; font: 600 15px var(--font-body); text-decoration: none; border-bottom: 1.5px solid rgba(255,255,255,.3); padding-bottom: 2px; cursor: pointer; }
+.final-links a:hover, .final-links button:hover { border-color: #fff; }
+.final :focus-visible { outline-color: #8fb0ff; }
+
+/* Rodapé */
+footer { padding-block: 48px 120px; border-top: 1px solid var(--line); }
+.foot-grid { display: grid; gap: 28px; }
+@media (min-width: 760px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+footer h4 { margin: 0 0 8px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-2); font-weight: 600; }
+footer p, footer a { font-size: 15.5px; }
+footer .small { margin-top: 32px; font-size: 13px; color: var(--ink-2); max-width: 70ch; }
+
+/* WhatsApp flutuante */
+.wa-float {
+  position: fixed; z-index: 40;
+  right: calc(16px + env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  height: 52px; padding: 0 20px 0 16px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px;
+  background: #128c4a; color: #fff; font: 600 15px var(--font-body); text-decoration: none;
+  box-shadow: 0 6px 20px rgba(8, 20, 40, .28);
+}
+.wa-float:hover { background: #0f7a40; }
+.wa-float svg { width: 22px; height: 22px; fill: currentColor; }
+.wa-float .wa-label { white-space: nowrap; }
+@media (min-width: 860px) { .wa-float .wa-label { display: inline; } }
+@media (max-width: 859px) { .wa-float { width: 56px; height: 56px; padding: 0; justify-content: center; } .wa-float .wa-label { display: none; } .wa-float svg { width: 26px; height: 26px; } }
+
+/* Toast */
+.toast {
+  position: fixed; left: 50%; transform: translate(-50%, 20px); z-index: 120; opacity: 0; pointer-events: none;
+  bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  width: min(92vw, 460px); background: #0f2247; color: #fff; padding: 14px 18px; border-radius: 14px; font-size: 14.5px;
+  box-shadow: 0 10px 30px rgba(8,20,40,.35); transition: opacity .2s ease, transform .2s ease; overflow-wrap: anywhere;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="demo-strip" id="demoStrip" hidden>Versão de demonstração para aprovação. As fotos vêm do perfil do Instagram e serão trocadas pelos arquivos originais.</div>
+<div id="app"></div>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Trabalho ampliado"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* =====================================================================
+   CONFIGURAÇÃO ÚNICA  (edite apenas este bloco para personalizar o site)
+   ===================================================================== */
+const CONFIG = {
+  // WhatsApp comercial: apenas dígitos, com código do país (55) e DDD. Único lugar a editar.
+  // Se voltar a ser "SEU_NUMERO_WHATSAPP", os botões mostram a mensagem pronta em vez de abrir o WhatsApp.
+  whatsappNumber: "5543996752935",
+  whatsappDisplay: "(43) 99675-2935",   // como o número aparece escrito no rodapé
+  logo: "img/logo.png",                 // logotipo do perfil. Trocar pelo arquivo original em alta resolução.
+  instagramUser: "juliano.bolos.e.doces",
+  instagramUrl: "https://www.instagram.com/juliano.bolos.e.doces/",
+  city: "Jaguariaíva, PR",
+  siteUrl: "",            // URL pública do site. Vazio = usa o endereço atual da página.
+  demo: true,             // true mostra a faixa "versão de demonstração". Use false ao publicar.
+  offerEvents: true,      // true exibe "Mesas de doces e eventos". Confirmar com o proprietário antes de publicar.
+
+  /* FOTOS AUTORAIS: caminho de cada foto. Para trocar, coloque o arquivo original na pasta img/
+     e altere o nome aqui. Campo vazio = aparece o marcador "Espaço para foto autoral".
+     As fotos atuais são recortes de um print do Instagram (baixa resolução). Use os originais ao publicar. */
+  photos: {
+    hero: "img/bolo-lirio.jpg", final: "img/bolo-borboletas.jpg", trust: "img/caixa-docinhos.jpg",
+    catBolos: "img/bolo-coracao.jpg", catAniversario: "img/bolo-borboletas.jpg",
+    catDocinhos: "img/doces-vermelhos.jpg", catEventos: "img/bolo-flores.jpg",
+    p1: "img/bolo-borboletas.jpg", p2: "img/bolo-coracao.jpg", p3: "img/bolo-lirio.jpg", p4: "img/bolo-toy.jpg",
+    p5: "img/bolo-flores.jpg", p6: "img/doces-vermelhos.jpg", p7: "img/caixa-docinhos.jpg", p8: "img/bolo-rosa.jpg"
+  },
+
+  // Depoimentos reais com autorização: [{ texto: "...", autor: "Nome" }]. Vazio = mostra a apresentação do trabalho.
+  testimonials: []
+};
+
+/* Mensagens pré-preenchidas por origem do contato */
+const MSG = {
+  principal: "Olá! Conheci o site do Juliano Bolos e Doces e gostaria de solicitar um orçamento.",
+  bolos: "Olá! Gostaria de consultar opções e valores para um bolo personalizado.",
+  aniversario: "Olá! Gostaria de consultar opções e valores para um bolo de aniversário ou comemoração.",
+  docinhos: "Olá! Gostaria de consultar opções de docinhos para minha comemoração.",
+  eventos: "Olá! Gostaria de saber se é possível encomendar uma mesa de doces para o meu evento.",
+  flutuante: "Olá! Vim pelo site e gostaria de conversar sobre uma encomenda.",
+  final: "Olá! Quero contar minha ideia e saber as possibilidades para a minha comemoração."
+};
+
+const CATEGORIES = [
+  { id: "bolos", key: "catBolos", art: "naked", nome: "Bolos personalizados", desc: "Criados a partir do tema, das cores e dos detalhes que você imaginou." },
+  { id: "aniversario", key: "catAniversario", art: "tall", nome: "Aniversários e comemorações", desc: "Bolos para festas, encontros e datas que pedem uma mesa bonita." },
+  { id: "docinhos", key: "catDocinhos", art: "doces", nome: "Docinhos e brigadeiros", desc: "Docinhos para festas, organizados para servir e para encantar." },
+  { id: "eventos", key: "catEventos", art: "mesa", nome: "Mesas de doces e eventos", desc: "Conjuntos de doces para eventos.", tag: "Sob consulta", evento: true }
+];
+
+/* ratio = proporção da foto no portfólio (largura/altura). Ajuste se trocar por fotos de outro formato. */
+const PORTFOLIO = [
+  { key: "p1", art: "tall", ratio: "4/5", cap: "Bolo de dois andares com borboletas e flores" },
+  { key: "p2", art: "drip", ratio: "4/5", cap: "Bolo em formato de coração" },
+  { key: "p3", art: "round", ratio: "4/5", cap: "Bolo com lírio e laços" },
+  { key: "p4", art: "naked", ratio: "4/5", cap: "Bolo temático colorido" },
+  { key: "p5", art: "mesa", ratio: "4/5", cap: "Bolo com arranjo de flores" },
+  { key: "p6", art: "doces", ratio: "4/5", cap: "Docinhos vermelhos e brancos" },
+  { key: "p7", art: "cupcakes", ratio: "4/5", cap: "Caixa de docinhos variados" },
+  { key: "p8", art: "tall", ratio: "1/1", cap: "Bolo rosa decorado" }
+];
+
+const FAQ = [
+  { q: "Como faço uma encomenda?", a: "Chame o Juliano pelo WhatsApp e conte sua ideia. Ele responde com as possibilidades e combina os detalhes diretamente com você." },
+  { q: "Com quanta antecedência devo consultar?", a: "Quanto antes você entrar em contato, mais fácil é verificar a disponibilidade da sua data. O prazo para cada tipo de encomenda é informado pelo Juliano na conversa." },
+  { q: "Como solicito um orçamento personalizado?", a: "Use o campo “Monte sua mensagem” nesta página ou o botão de orçamento. A conversa abre no WhatsApp já com as informações que você escolheu." },
+  { q: "Quais informações preciso enviar?", a: "Ajuda bastante informar a ocasião, a data, a quantidade aproximada de convidados, o tema ou as cores desejadas e uma foto de referência, se tiver." },
+  { q: "Como verifico a disponibilidade para minha data?", a: "Informe a data na mensagem. A disponibilidade é confirmada pelo Juliano, diretamente pelo WhatsApp." }
+];
+
+/* =====================================================================
+   Utilidades
+   ===================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const numberPending = () => !/^\d{10,15}$/.test(CONFIG.whatsappNumber);
+const waLink = (msg) => `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+const pageUrl = () => CONFIG.siteUrl || location.href.split("#")[0];
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+const WA_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24s-3.7 8.24-8.24 8.24Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.42h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07s.88 2.4 1 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>';
+
+/* Marcadores de foto: desenhos em linha, claramente identificados como espaço reservado */
+function art(kind) {
+  const F = 'fill="var(--ph-fg)"';
+  let s = "";
+  const plate = '<ellipse cx="200" cy="418" rx="140" ry="12" ' + F + ' opacity=".18"/>';
+  if (kind === "tall") {
+    s = `<rect x="120" y="305" width="160" height="108" rx="8" ${F} opacity=".34"/><rect x="140" y="215" width="120" height="90" rx="8" ${F} opacity=".26"/><rect x="162" y="135" width="76" height="80" rx="8" ${F} opacity=".34"/><rect x="198" y="100" width="4" height="35" ${F} opacity=".4"/><circle cx="200" cy="92" r="7" ${F} opacity=".5"/>`;
+  } else if (kind === "round") {
+    s = `<rect x="70" y="290" width="260" height="122" rx="12" ${F} opacity=".3"/><rect x="70" y="272" width="260" height="24" rx="12" ${F} opacity=".42"/>` +
+      [0,1,2,3,4,5,6].map(i => `<circle cx="${96 + i * 34}" cy="262" r="11" ${F} opacity=".5"/>`).join("");
+  } else if (kind === "drip") {
+    s = `<rect x="110" y="232" width="180" height="180" rx="10" ${F} opacity=".28"/><rect x="110" y="232" width="180" height="26" rx="10" ${F} opacity=".45"/>` +
+      [0,1,2,3,4,5].map(i => `<rect x="${122 + i * 28}" y="250" width="14" height="${22 + (i % 3) * 24}" rx="7" ${F} opacity=".45"/>`).join("") +
+      `<circle cx="200" cy="214" r="10" ${F} opacity=".5"/>`;
+  } else if (kind === "doces") {
+    s = `<rect x="56" y="190" width="288" height="210" rx="18" ${F} opacity=".16"/>` +
+      [0,1,2,3].flatMap(i => [0,1,2].map(j => `<circle cx="${110 + i * 60}" cy="${244 + j * 58}" r="21" ${F} opacity="${.3 + ((i + j) % 3) * .1}"/>`)).join("");
+  } else if (kind === "mesa") {
+    s = `<rect x="36" y="364" width="328" height="10" rx="5" ${F} opacity=".4"/><rect x="190" y="304" width="20" height="60" ${F} opacity=".3"/><rect x="126" y="292" width="148" height="12" rx="6" ${F} opacity=".4"/><rect x="152" y="226" width="96" height="66" rx="8" ${F} opacity=".3"/>` +
+      [0,1,2].map(i => `<circle cx="${72 + i * 26}" cy="344" r="12" ${F} opacity=".4"/>`).join("") +
+      [0,1,2].map(i => `<circle cx="${286 + i * 26}" cy="344" r="12" ${F} opacity=".4"/>`).join("");
+  } else if (kind === "naked") {
+    s = [0,1,2,3].map(i => `<rect x="110" y="${236 + i * 40}" width="180" height="30" rx="6" ${F} opacity="${i % 2 ? .22 : .38}"/>`).join("") +
+      `<circle cx="160" cy="226" r="10" ${F} opacity=".5"/><circle cx="200" cy="220" r="12" ${F} opacity=".5"/><circle cx="242" cy="227" r="9" ${F} opacity=".5"/>`;
+  } else if (kind === "cupcakes") {
+    s = [0,1,2].map(i => { const x = 90 + i * 88; return `<path d="M${x} 340 L${x + 64} 340 L${x + 54} 396 L${x + 10} 396 Z" ${F} opacity=".34"/><circle cx="${x + 32}" cy="322" r="30" ${F} opacity=".42"/>`; }).join("");
+  }
+  return `<svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">${plate}${s}</svg>`;
+}
+
+/* Componente de foto: usa a imagem configurada ou o marcador */
+function Photo(key, kind, alt, opts = {}) {
+  const src = CONFIG.photos[key];
+  const loading = opts.eager ? "eager" : "lazy";
+  const st = opts.ratio ? ` style="aspect-ratio:${esc(opts.ratio)}"` : "";
+  if (src) return `<div class="photo"${st}><img src="${esc(src)}" alt="${esc(alt)}" loading="${loading}" decoding="async"></div>`;
+  return `<div class="photo"${st} role="img" aria-label="Espaço reservado: ${esc(alt)}">${art(kind)}<span class="ph-tag">Espaço para foto autoral</span></div>`;
+}
+
+/* =====================================================================
+   Componentes
+   ===================================================================== */
+function Header() {
+  return `
+  <header class="site-header">
+    <div class="header-in">
+      <a class="brand" href="#topo" aria-label="Juliano Bolos e Doces, início">
+        <img class="logo" src="${esc(CONFIG.logo)}" alt="" width="42" height="42">
+        <span class="bt"><b>Juliano</b><i>Bolos e Doces</i></span>
+      </a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#produtos">Produtos</a><a href="#trabalhos">Trabalhos</a><a href="#personalizacao">Personalização</a><a href="#como-funciona">Como pedir</a><a href="#duvidas">Dúvidas</a>
+      </nav>
+      <div class="header-actions">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+        <a class="btn btn-primary btn-sm" data-wa="principal" href="${waLink(MSG.principal)}" target="_blank" rel="noopener noreferrer">Orçamento</a>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menu móvel">
+      <a href="#produtos">Produtos</a><a href="#trabalhos">Trabalhos</a><a href="#personalizacao">Personalização</a><a href="#como-funciona">Como pedir</a><a href="#duvidas">Dúvidas</a>
+    </nav>
+  </header>`;
+}
+
+function Hero() {
+  return `
+  <section class="hero" id="topo" aria-labelledby="h1">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">${esc(CONFIG.city)} · Encomendas sob consulta</p>
+        <h1 id="h1" class="display">Bolos e doces feitos para o seu <em>momento especial.</em></h1>
+        <p class="lead">Bolos personalizados, bolos de comemoração e docinhos para festas. Conte sua ideia e o Juliano apresenta as possibilidades para a sua data.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" data-wa="principal" href="${waLink(MSG.principal)}" target="_blank" rel="noopener noreferrer">Encomendar pelo WhatsApp</a>
+          <a class="btn btn-ghost" href="#trabalhos">Explorar nossos trabalhos</a>
+        </div>
+        <p class="hero-note">Sem formulário longo: a conversa começa direto no WhatsApp.</p>
+        <a class="scroll-hint" href="#produtos" aria-label="Rolar para ver os produtos"><span>Role</span><i></i></a>
+      </div>
+      ${Photo("hero", "tall", "Bolo decorado com lírio e laços de fita", { eager: true })}
+    </div>
+  </section>`;
+}
+
+function Categories() {
+  const items = CATEGORIES.filter(c => !c.evento || CONFIG.offerEvents).map(c => `
+    <article class="cat">
+      ${Photo(c.key, c.art, c.nome)}
+      <div>
+        ${c.tag ? `<p class="tag">${esc(c.tag)}</p>` : ""}
+        <h3>${esc(c.nome)}</h3>
+      </div>
+      <p>${esc(c.desc)}</p>
+      <div class="cat-actions">
+        <a class="btn btn-ghost btn-sm" data-wa="${c.id}" href="${waLink(MSG[c.id])}" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+        <a class="link-arrow" href="#trabalhos">Ver trabalhos</a>
+      </div>
+    </article>`).join("");
+  return `
+  <section class="alt band" id="produtos" aria-labelledby="h-prod">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Produtos</p>
+        <h2 class="h-section" id="h-prod">O que você pode encomendar</h2>
+        <p class="lead">Escolha uma categoria e a conversa no WhatsApp já abre com o assunto definido.</p>
+      </div>
+      <div class="cat-grid">${items}</div>
+    </div>
+  </section>`;
+}
+
+function Portfolio() {
+  const items = PORTFOLIO.map((p, i) => `
+    <button class="port-item" data-lb="${i}" aria-label="Ampliar: ${esc(p.cap)}">
+      ${Photo(p.key, p.art, p.cap, { ratio: p.ratio })}
+      <span class="cap">${esc(p.cap)}</span>
+    </button>`).join("");
+  return `
+  <section id="trabalhos" aria-labelledby="h-port">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Trabalhos autorais</p>
+        <h2 class="h-section" id="h-port">Acabamento, cor e cada detalhe.</h2>
+        <p class="lead">Uma seleção de encomendas para você avaliar o estilo e escolher referências. Toque em uma imagem para ampliar.</p>
+      </div>
+      <div class="grid-port">${items}</div>
+      <div class="port-foot">
+        <span>Quer ver mais? As publicações recentes estão no Instagram.</span>
+        <a class="btn btn-ghost btn-sm" href="${esc(CONFIG.instagramUrl)}" target="_blank" rel="noopener noreferrer">Ver no Instagram</a>
+      </div>
+    </div>
+  </section>`;
+}
+
+function Personalization() {
+  const cats = [["bolo personalizado", "Bolo personalizado"], ["bolo de aniversário ou comemoração", "Aniversário"], ["docinhos", "Docinhos"], ["mesa de doces ou evento", "Evento"]]
+    .filter(([v]) => v !== "mesa de doces ou evento" || CONFIG.offerEvents)
+    .map(([v, l], i) => `<button type="button" class="chip" data-cat="${esc(v)}" aria-pressed="${i === 0}">${esc(l)}</button>`).join("");
+  return `
+  <section class="alt band" id="personalizacao" aria-labelledby="h-pers">
+    <div class="wrap pers-grid">
+      <div>
+        <p class="eyebrow">Personalização</p>
+        <h2 class="h-section" id="h-pers" style="margin-top:14px">Seu bolo, do seu jeito.</h2>
+        <p class="lead" style="margin-top:18px">Converse sobre o que você imagina. Disponibilidade, tamanhos e prazos são confirmados diretamente com o Juliano.</p>
+        <ul class="checklist">
+          <li><b>Ocasião</b><span>Aniversário, encontro, celebração ou outra data especial.</span></li>
+          <li><b>Tema</b><span>Cores, estilo e referências que você gostou.</span></li>
+          <li><b>Convidados</b><span>Uma ideia da quantidade ajuda a pensar no tamanho.</span></li>
+          <li><b>Detalhes</b><span>Sabores, decoração e o que for importante para você.</span></li>
+        </ul>
+      </div>
+      <form class="builder" id="builder" aria-labelledby="h-build" novalidate>
+        <h3 id="h-build">Monte sua mensagem</h3>
+        <div class="field">
+          <span class="lbl" id="lblCat">O que você procura?</span>
+          <div class="chips" role="group" aria-labelledby="lblCat">${cats}</div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="occ">Ocasião</label><input id="occ" type="text" placeholder="Ex.: aniversário de 8 anos" autocomplete="off"></div>
+          <div class="field"><label for="dt">Data</label><input id="dt" type="date"></div>
+        </div>
+        <div class="field"><label for="guests">Convidados (aproximado)</label><input id="guests" type="number" inputmode="numeric" min="1" placeholder="Opcional"></div>
+        <div class="preview" aria-live="polite"><b>Mensagem que será enviada</b><span id="prevMsg"></span></div>
+        <a class="btn btn-primary" id="buildSend" data-wa="custom" href="#" target="_blank" rel="noopener noreferrer">Abrir conversa no WhatsApp</a>
+        <p class="fine">Nada é enviado por este formulário. Ele apenas prepara o texto e abre o WhatsApp para você enviar.</p>
+      </form>
+    </div>
+  </section>`;
+}
+
+function Process() {
+  const steps = [
+    ["Escolha uma referência ou explique sua ideia", "Veja os trabalhos, separe uma foto de que gostou ou descreva o que imagina."],
+    ["Consulte disponibilidade e orçamento", "Fale com o Juliano pelo WhatsApp informando a data e os detalhes principais."],
+    ["Combine os detalhes e confirme", "A confirmação da encomenda é feita diretamente com a empresa."]
+  ].map(([t, d], i) => `<li class="step"><span class="n">${i + 1}</span><h3>${t}</h3><p>${d}</p></li>`).join("");
+  return `
+  <section id="como-funciona" aria-labelledby="h-steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Como encomendar</p>
+        <h2 class="h-section" id="h-steps">Três passos, sem complicação.</h2>
+      </div>
+      <ol class="steps">${steps}</ol>
+    </div>
+  </section>`;
+}
+
+function Trust() {
+  const quotes = CONFIG.testimonials.length
+    ? `<div class="quotes">${CONFIG.testimonials.map(t => `<blockquote><p>${esc(t.texto)}</p><cite>${esc(t.autor)}</cite></blockquote>`).join("")}</div>`
+    : `<div class="pillars">
+        <div class="pillar"><b>Conversa direta</b><span>Você fala com quem faz o seu bolo, sem intermediários.</span></div>
+        <div class="pillar"><b>Pensado para a sua ocasião</b><span>Cada encomenda parte do tema e dos detalhes que você escolher.</span></div>
+        <div class="pillar"><b>Trabalho artesanal</b><span>Acabamento e decoração feitos com atenção a cada detalhe.</span></div>
+        <p><a class="link-arrow" href="${esc(CONFIG.instagramUrl)}" target="_blank" rel="noopener noreferrer">Ver feedbacks de clientes no Instagram</a></p>
+      </div>`;
+  return `
+  <section class="alt band trust" aria-labelledby="h-trust">
+    <div class="wrap trust-grid">
+      ${Photo("trust", "round", "Caixa com docinhos variados")}
+      <div>
+        <p class="eyebrow">${CONFIG.testimonials.length ? "Quem já encomendou" : "Nossa proposta"}</p>
+        <h2 class="h-section" id="h-trust" style="margin-top:14px">Cada encomenda começa com uma conversa.</h2>
+        ${quotes}
+      </div>
+    </div>
+  </section>`;
+}
+
+function Faq() {
+  const items = FAQ.map(f => `<details><summary>${esc(f.q)}</summary><div class="ans">${esc(f.a)}</div></details>`).join("");
+  return `
+  <section id="duvidas" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2 class="h-section" id="h-faq">Antes de chamar.</h2>
+      </div>
+      <div class="faq">${items}</div>
+    </div>
+  </section>`;
+}
+
+function FinalCta() {
+  return `
+  <section class="final band" aria-labelledby="h-final">
+    <div class="wrap final-grid">
+      <div>
+        <p class="eyebrow">Encomende</p>
+        <h2 class="display" id="h-final">Seu próximo momento especial começa aqui.</h2>
+        <p class="lead">Conte sua ideia para o Juliano e descubra as possibilidades para sua comemoração.</p>
+        <div class="final-actions">
+          <a class="btn btn-light" data-wa="final" href="${waLink(MSG.final)}" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+        </div>
+        <div class="final-links">
+          <a href="#trabalhos">Voltar aos trabalhos</a>
+          <a href="${esc(CONFIG.instagramUrl)}" target="_blank" rel="noopener noreferrer">Acompanhar no Instagram</a>
+          <button type="button" data-share>Indicar para um amigo</button>
+        </div>
+      </div>
+      ${Photo("final", "tall", "Bolo de dois andares com borboletas e flores")}
+    </div>
+  </section>`;
+}
+
+function Footer() {
+  const wa = numberPending() ? "WhatsApp: número a configurar" : "WhatsApp " + CONFIG.whatsappDisplay;
+  return `
+  <footer class="band">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="brand" href="#topo"><img class="logo" src="${esc(CONFIG.logo)}" alt="" width="56" height="56"><span class="bt"><b>Juliano</b><i>Bolos e Doces</i></span></a>
+          <p style="margin-top:14px;color:var(--ink-2);max-width:36ch">Sua vida mais doce por nossa conta. Bolos e doces personalizados, sob encomenda.</p>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <p><a data-wa="principal" href="${waLink(MSG.principal)}" target="_blank" rel="noopener noreferrer">${wa}</a></p>
+          <p><a href="${esc(CONFIG.instagramUrl)}" target="_blank" rel="noopener noreferrer">@${esc(CONFIG.instagramUser)}</a></p>
+        </div>
+        <div>
+          <h4>Onde estamos</h4>
+          <p>${esc(CONFIG.city)}</p>
+          <p style="margin-top:8px"><button type="button" class="link-arrow" data-share style="background:none;border:0;padding:0 0 2px;font:600 15.5px var(--font-body);color:var(--ink);cursor:pointer">Compartilhar este site</button></p>
+        </div>
+      </div>
+      <p class="small">Endereço, horários e demais informações comerciais serão incluídos quando confirmados pelo proprietário. Valores, prazos e disponibilidade são combinados diretamente com a empresa.</p>
+    </div>
+  </footer>`;
+}
+
+function WaFloat() {
+  return `<a class="wa-float" data-wa="flutuante" href="${waLink(MSG.flutuante)}" target="_blank" rel="noopener noreferrer" aria-label="Chamar no WhatsApp">${WA_ICON}<span class="wa-label">WhatsApp</span></a>`;
+}
+
+/* =====================================================================
+   Montagem e interações
+   ===================================================================== */
+function mount() {
+  $("#app").innerHTML = Header() + `<main>` + Hero() + Categories() + Portfolio() + Personalization() + Process() + Trust() + Faq() + FinalCta() + `</main>` + Footer() + WaFloat();
+  $("#demoStrip").hidden = !CONFIG.demo;
+  initMenu(); initBuilder(); initLightbox(); initShare(); initWhatsApp();
+}
+
+let toastTimer;
+function toast(msg, ms = 3200) {
+  const t = $("#toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), ms);
+}
+
+/* WhatsApp: enquanto o número não estiver configurado, mostra a mensagem pronta */
+function initWhatsApp() {
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[data-wa]");
+    if (!a || !numberPending()) return;
+    e.preventDefault();
+    let msg = "";
+    try { msg = decodeURIComponent(new URL(a.href).searchParams.get("text") || ""); } catch (_) {}
+    toast("Demonstração: o número do WhatsApp ainda será configurado. Mensagem preparada: " + msg, 7000);
+  });
+}
+
+function initMenu() {
+  const btn = $("#menuBtn"), nav = $("#mobileNav");
+  btn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", String(open));
+  });
+  $$("#mobileNav a").forEach(a => a.addEventListener("click", () => { nav.classList.remove("open"); btn.setAttribute("aria-expanded", "false"); }));
+}
+
+/* Conversão assistida: monta a mensagem de acordo com as escolhas */
+function initBuilder() {
+  const occ = $("#occ"), dt = $("#dt"), guests = $("#guests"), prev = $("#prevMsg"), send = $("#buildSend");
+  let cat = $(".chip[aria-pressed='true']").dataset.cat;
+  const fmtDate = (v) => { if (!v) return ""; const [y, m, d] = v.split("-"); return `${d}/${m}/${y}`; };
+  const build = () => {
+    const parts = [`Olá! Gostaria de fazer uma encomenda de ${cat}.`];
+    if (occ.value.trim()) parts.push(`A ocasião é ${occ.value.trim()}.`);
+    if (dt.value) parts.push(`A data é ${fmtDate(dt.value)}.`);
+    if (guests.value) parts.push(`Serão cerca de ${guests.value} convidados.`);
+    parts.push("Gostaria de receber informações sobre disponibilidade e valores.");
+    const msg = parts.join(" ");
+    prev.textContent = msg;
+    send.href = waLink(msg);
+  };
+  $$(".chip").forEach(c => c.addEventListener("click", () => {
+    $$(".chip").forEach(x => x.setAttribute("aria-pressed", "false"));
+    c.setAttribute("aria-pressed", "true"); cat = c.dataset.cat; build();
+  }));
+  [occ, dt, guests].forEach(el => el.addEventListener("input", build));
+  $("#builder").addEventListener("submit", (e) => e.preventDefault());
+  build();
+}
+
+/* Lightbox acessível */
+function initLightbox() {
+  const lb = $("#lb"); let idx = 0, opener = null;
+  const render = () => {
+    const p = PORTFOLIO[idx];
+    lb.innerHTML = `
+      <div class="lb-box">
+        ${Photo(p.key, p.art, p.cap, { ratio: p.ratio })}
+        <div class="lb-cap">
+          <span>${esc(p.cap)} · ${idx + 1} de ${PORTFOLIO.length}</span>
+          <div class="lb-nav">
+            <button class="lb-btn" data-lb-prev aria-label="Anterior">←</button>
+            <button class="lb-btn" data-lb-next aria-label="Próximo">→</button>
+            <button class="lb-btn" data-lb-close>Fechar</button>
+          </div>
+        </div>
+        <a class="btn btn-light" data-wa="bolos" href="${waLink(MSG.bolos)}" target="_blank" rel="noopener noreferrer">Quero algo assim</a>
+      </div>`;
+  };
+  const open = (i, from) => { idx = i; opener = from; render(); lb.classList.add("open"); $("[data-lb-close]", lb).focus(); };
+  const close = () => { lb.classList.remove("open"); if (opener) opener.focus(); };
+  const step = (d) => { idx = (idx + d + PORTFOLIO.length) % PORTFOLIO.length; render(); $("[data-lb-next]", lb).focus(); };
+  $$("[data-lb]").forEach(b => b.addEventListener("click", () => open(+b.dataset.lb, b)));
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb || e.target.closest("[data-lb-close]")) close();
+    else if (e.target.closest("[data-lb-prev]")) step(-1);
+    else if (e.target.closest("[data-lb-next]")) step(1);
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") close();
+    if (e.key === "ArrowLeft") step(-1);
+    if (e.key === "ArrowRight") step(1);
+    if (e.key === "Tab") {
+      const f = $$("button, a[href]", lb); if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+}
+
+/* Compartilhar: Web Share quando suportado, senão copia o link */
+function initShare() {
+  const title = "Juliano Bolos e Doces";
+  const text = "Bolos personalizados e docinhos para festas em Jaguariaíva, PR.";
+  const flash = (btn) => {
+    if (!btn) return;
+    const old = btn.textContent; btn.textContent = "Link copiado";
+    setTimeout(() => { btn.textContent = old; }, 2000);
+  };
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-share]");
+    if (!btn) return;
+    const url = pageUrl();
+    if (navigator.share) {
+      try { await navigator.share({ title, text, url }); return; }
+      catch (err) { if (err && err.name === "AbortError") return; }
+    }
+    try { await navigator.clipboard.writeText(url); flash(btn); toast("Link copiado. Agora é só enviar para quem você quiser."); }
+    catch (_) { toast("Copie o link do site: " + url, 6000); }
+  });
+}
+
+mount();
+</script>
+</body>
+</html>
