@@ -1,0 +1,62 @@
+/* A single icon family and natural line wrapping keep the editorial layout calm. */
+.lucide { display:inline-block; flex-shrink:0; vertical-align:middle; }
+.button, .text-link, .nav-order, .more-button, .footer-bottom a { gap:20px; }
+.button .lucide, .text-link .lucide { align-self:center; }
+.footer-bottom a, .lightbox-close { display:inline-flex; align-items:center; gap:9px; }
+.lightbox-arrows button { display:grid; place-items:center; }
+.menu-toggle { align-items:center; gap:9px; }
+.care-icon { display:block; margin-bottom:22px; color:var(--blue); }
+.chapter-date { gap:12px; }
+.chapter-date>.chapter-theme-icon { width:18px; height:18px; border:0; border-radius:0; }
+.story-word { white-space:nowrap; }
+h1, h2, h3 { text-wrap:balance; word-break:normal; overflow-wrap:normal; hyphens:none; }
+p { text-wrap:pretty; }
+.opening-content h1 { font-size:clamp(64px,6.9vw,106px); line-height:1.08; max-width:900px; }
+.opening-description { max-width:42ch; line-height:1.85; font-size:16px; }
+.journey-chapter h2 { font-size:clamp(43px,4.1vw,64px); line-height:1.14; letter-spacing:-.035em; }
+.chapter-text { line-height:1.85; max-width:46ch; font-size:15px; }
+.chapter-words { word-spacing:-.035em; }
+.story-invitation h2 { max-width:17ch; line-height:1.12; }
+.story-invitation>p:not(.eyebrow) { max-width:47ch; margin-inline:auto; line-height:1.8; }
+.hero .hero-title { font-size:clamp(58px,6.4vw,98px); line-height:1.07; max-width:14ch; }
+.hero-copy>p:not(.eyebrow) { max-width:31ch; line-height:1.8; }
+.section-top h2 { max-width:13ch; line-height:1.1; }
+.section-top>p { max-width:30ch; line-height:1.8; }
+.image-statement h2 { max-width:16ch; line-height:1.08; }
+.care h2 { max-width:15ch; line-height:1.1; }
+.care-grid h3 { line-height:1.22; }
+.care-grid p { line-height:1.8; }
+.order h2 { max-width:14ch; line-height:1.12; }
+.order-copy>p:not(.eyebrow) { max-width:37ch; line-height:1.8; }
+.order-copy>small { max-width:32ch; line-height:1.9; }
+.work-info h3 { line-height:1.25; }
+.gallery { align-items:start; }
+.work { align-self:start; display:block; }
+.filters button { align-items:center; gap:8px; }
+.form-note { font-size:11px; line-height:1.8; }
+@media(max-width:1000px) and (min-width:701px) {
+  .hero .hero-title { font-size:66px; }
+  .journey-chapter h2 { font-size:45px; }
+}
+@media(max-width:700px) {
+  .menu-toggle { display:inline-flex; }
+  .opening-content h1 { font-size:clamp(43px,12.5vw,65px); line-height:1.13; text-wrap:balance; }
+  .opening-description { font-size:14px; line-height:1.85; max-width:35ch; }
+  .journey-chapter h2 { font-size:clamp(31px,8.8vw,46px); line-height:1.17; letter-spacing:-.03em; }
+  .chapter-text { font-size:14px; line-height:1.9; }
+  .chapter-date { gap:10px; font-size:9px; letter-spacing:.08em; }
+  .chapter-date>span:first-child { width:29px; height:29px; }
+  .journey-caption p { font-size:10px; line-height:1.5; }
+  .hero .hero-title { font-size:clamp(46px,12.4vw,64px); line-height:1.1; max-width:14ch; }
+  .section-top h2, .care h2 { font-size:clamp(39px,10.8vw,55px); line-height:1.13; }
+  .image-statement h2 { font-size:clamp(42px,11.3vw,58px); line-height:1.12; }
+  .story-invitation h2 { font-size:clamp(38px,10.7vw,56px); line-height:1.16; }
+  .order h2 { font-size:clamp(47px,12.8vw,64px); line-height:1.12; }
+  .filters { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px 17px; }
+  .filters button { gap:8px; margin-right:0; min-height:44px; padding-bottom:9px; }
+  .filters button>span { margin-left:auto; }
+  .filters .lucide { width:15px; height:15px; }
+  .work-info h3 { font-size:20px; line-height:1.25; }
+  .button { gap:16px; }
+  .care-icon { margin-bottom:18px; }
+}
