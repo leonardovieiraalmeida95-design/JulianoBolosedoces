@@ -1,6 +1,6 @@
 # Juliano Bolos e Doces
 
-Next.js + TypeScript + Tailwind CSS. O conteúdo e as interações existentes foram preservados. Os componentes usam TypeScript; as interações anteriores permanecem em um módulo JavaScript de compatibilidade.
+Site de apresentação em Next.js, TypeScript e Tailwind CSS, com galeria de 23 fotos, filtros, ampliação acessível, história do Juliano e formulário que prepara uma conversa no WhatsApp. Os contatos comerciais foram preservados da versão anterior.
 
 ## Desenvolvimento
 
@@ -8,4 +8,8 @@ Next.js + TypeScript + Tailwind CSS. O conteúdo e as interações existentes fo
 
 ## Publicação
 
-A branch main compila a exportação estática via GitHub Actions e atualiza os arquivos do Pages. A Vercel usa a raiz do domínio ao detectar seu ambiente de build. Edite os arquivos em src, não o index.html gerado.
+A branch main compila a exportação estática via GitHub Actions e atualiza os arquivos do Pages em /JulianoBolosedoces/. Edite src/app/page.tsx e src/app/editorial.css, não o index.html gerado. As fotos otimizadas estão em img/; a preparação copia essa pasta para public/img/.
+
+A imagem hero-editorial.webp recebeu tratamento com IA de luz e cenário a partir da foto do bolo com flores rosas. As fotos da galeria são os registros fornecidos, comprimidos em WebP; a assinatura do fotógrafo nas fotos de casamento foi preservada. As fotos acompanham a narrativa sem identificar qual foi o primeiro bolo ou atribuir datas às criações.
+
+O formulário não armazena dados nem confirma pedidos: prepara uma mensagem para o visitante enviar pelo WhatsApp. Datas, valores e disponibilidade são combinados diretamente com o Juliano.
