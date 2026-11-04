@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
 import "./editorial.css";
 import "./story.css";
+import "./mobile-story.css";
 export const metadata: Metadata = {
   "title": "Juliano Bolos e Doces",
   "description": "Bolos personalizados, bolos de comemoração e docinhos para festas em Jaguariaíva, PR. Encomendas sob consulta pelo WhatsApp.",

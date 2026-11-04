@@ -24,13 +24,17 @@ export default function StoryOpening() {
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0;
     const panels = Array.from(section.querySelectorAll<HTMLElement>('[data-chapter]'));
+    const visualPanel = section.querySelector<HTMLElement>('.journey-visual');
     function update() {
       frame = 0;
       let current = 0;
+      const mobile = window.matchMedia('(max-width: 700px)').matches;
+      const visualHeight = mobile ? visualPanel?.getBoundingClientRect().height || 0 : 0;
+      const readingHeight = innerHeight - visualHeight;
       panels.forEach((panel, index) => {
         const rect = panel.getBoundingClientRect();
-        if (rect.top < innerHeight * .58) current = index;
-        const progress = Math.max(0, Math.min(1, (innerHeight * .86 - rect.top) / (innerHeight * .53)));
+        if (rect.top < visualHeight + readingHeight * .58) current = index;
+        const progress = Math.max(0, Math.min(1, (readingHeight * .86 - (rect.top - visualHeight)) / (readingHeight * .53)));
         panel.querySelectorAll<HTMLElement>('.story-word').forEach((word, i, words) => {
           const reveal = motion.matches ? 1 : Math.max(0, Math.min(1, progress * 2.1 - i / words.length));
           word.style.opacity = String(.2 + reveal * .8);
@@ -47,6 +51,8 @@ export default function StoryOpening() {
     return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); motion.removeEventListener('change', onScroll); cancelAnimationFrame(frame); };
   }, []);
 
+  const visual = <aside className="journey-visual" aria-label="Criações que acompanham essa história"><div className="journey-images">{chapters.map((chapter,i)=><img key={chapter.photo} src={image(chapter.photo)} alt={chapter.alt} className={active===i?'chapter-image is-active':'chapter-image'} aria-hidden={active!==i} width="900" height="1100" loading="lazy"/>)}</div><div className="journey-caption"><span>{String(active+1).padStart(2,'0')} / 05</span><p>{chapters[active].caption}</p></div><nav className="chapter-dots" aria-label="Capítulos da história">{chapters.map((chapter,i)=><a key={chapter.date} href={`#capitulo-${i+1}`} aria-label={`Capítulo ${i+1}: ${chapter.date}`} aria-current={active===i?'step':undefined}><span/></a>)}</nav></aside>;
+
   return <div ref={root} className="story-opening" id="inicio">
     <section className="opening-scene" aria-labelledby="opening-title">
       <img className="opening-image" src={image('hero-editorial.webp')} alt="Bolo do Juliano com flores rosas e acabamento artesanal" width="1536" height="1024" fetchPriority="high"/>
@@ -55,8 +61,8 @@ export default function StoryOpening() {
       <div className="opening-foot"><span>JAGUARIAÍVA, PARANÁ</span><span>UM BOLO. UM COMEÇO. UMA HISTÓRIA.</span><span>DESDE 2024</span></div>
     </section>
     <section className="story-journey" id="historia" aria-label="A história do Juliano em cinco capítulos">
+      {visual}
       <div className="journey-copy"><div className="journey-label eyebrow">A HISTÓRIA POR TRÁS DO SABOR</div>{chapters.map((chapter, i) => <article className="journey-chapter" data-chapter={i} id={`capitulo-${i+1}`} key={chapter.date} aria-labelledby={`chapter-title-${i}`}><p className="chapter-date"><span>{String(i+1).padStart(2,'0')}</span>{chapter.date}</p><h2 id={`chapter-title-${i}`}><Words text={chapter.title}/></h2><p className="chapter-text">{chapter.text}</p><div className="chapter-mobile-photo"><img src={image(chapter.photo)} alt={chapter.alt} loading="lazy" width="700" height="850"/><p>{chapter.caption}</p></div>{i < chapters.length-1 && <a className="chapter-next" href={`#capitulo-${i+2}`}>O próximo passo <span aria-hidden="true">↓</span></a>}</article>)}</div>
-      <aside className="journey-visual" aria-label="Criações que acompanham essa história"><div className="journey-images">{chapters.map((chapter,i)=><img key={chapter.photo} src={image(chapter.photo)} alt={chapter.alt} className={active===i?'chapter-image is-active':'chapter-image'} aria-hidden={active!==i} width="900" height="1100" loading="lazy"/>)}</div><div className="journey-caption"><span>{String(active+1).padStart(2,'0')} / 05</span><p>{chapters[active].caption}</p></div><nav className="chapter-dots" aria-label="Capítulos da história">{chapters.map((chapter,i)=><a key={chapter.date} href={`#capitulo-${i+1}`} aria-label={`Capítulo ${i+1}: ${chapter.date}`} aria-current={active===i?'step':undefined}><span/></a>)}</nav></aside>
     </section>
     <section className="story-invitation"><p className="eyebrow">E ESSA HISTÓRIA ESTÁ SÓ COMEÇANDO</p><h2>O meu próximo capítulo<br/>pode ser <em>a sua celebração.</em></h2><p>Agora que você conhece um pouco de mim,<br/> conheça o carinho que sai da minha cozinha.</p><a className="button button-light" href="#vitrine">Descubra os bolos e doces <span aria-hidden="true">↓</span></a><span className="invitation-signature">Juliano</span></section>
   </div>;

@@ -1,4 +1,4 @@
-:HL["/JulianoBolosedoces/_next/static/chunks/1g77b1m0kopnp.css","style"]
+:HL["/JulianoBolosedoces/_next/static/css/028222eaa670e8f6.css","style"]
 :HL["https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap","style"]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"LMJBDbHjWW-tYJT3NHsiN","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"hjS-ZMGsgeuonveCh0eql","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

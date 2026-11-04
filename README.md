@@ -2,7 +2,7 @@
 
 Site de apresentação em Next.js, TypeScript e Tailwind CSS, com galeria de 23 fotos, filtros, ampliação acessível, história do Juliano e formulário que prepara uma conversa no WhatsApp. Os contatos comerciais foram preservados da versão anterior.
 
-A página abre com a história em cinco capítulos, seguida da apresentação dos produtos. Os títulos ganham destaque conforme a rolagem; a imagem lateral muda junto com o capítulo no computador. No celular, cada etapa inclui sua imagem. A rolagem permanece livre, e as animações respeitam a preferência por movimento reduzido. O conteúdo continua legível sem JavaScript.
+A página abre com a história em cinco capítulos, seguida da apresentação dos produtos. Os títulos ganham destaque conforme a rolagem; a imagem lateral muda junto com o capítulo no computador. No celular, um painel fixo no topo acompanha a leitura e troca de imagem por capítulo. A rolagem permanece livre, e as animações respeitam a preferência por movimento reduzido. O conteúdo continua legível sem JavaScript. Um cursor de bolo em SVG aparece nos dispositivos com mouse, preservando o cursor de texto nos campos do formulário.
 
 ## Desenvolvimento
 

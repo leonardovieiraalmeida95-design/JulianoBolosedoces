@@ -1,0 +1,50 @@
+/* The same image stage follows all five chapters on desktop and mobile. */
+@media (min-width:701px) {
+  .journey-copy { grid-column:1; grid-row:1; }
+  .journey-visual { grid-column:2; grid-row:1; }
+}
+@media (max-width:700px) {
+  .story-journey { isolation:isolate; }
+  .journey-visual {
+    display:grid; grid-template-columns:1fr auto; grid-template-rows:minmax(0,1fr) auto;
+    position:sticky; top:0; z-index:6; height:clamp(200px,36svh,320px);
+    min-height:0; max-height:none; margin:0 -6.82%; padding:10px 6% 8px;
+    background:var(--cream); border-bottom:1px solid var(--line);
+    box-shadow:0 7px 15px #1427430a;
+  }
+  .journey-images { grid-column:1 / -1; height:100%; max-height:none; background:#e8e1d7; }
+  .chapter-image { object-fit:contain; object-position:center; }
+  .journey-caption { gap:10px; align-items:center; margin-top:8px; padding-right:8px; }
+  .journey-caption>span { font-size:9px; padding:0; }
+  .journey-caption p { font-size:9px; line-height:1.4; }
+  .chapter-dots { align-self:center; gap:0; margin:6px -4px 0 0; }
+  .chapter-dots a { padding:12px 4px; }
+  .chapter-dots a span { width:12px; }
+  .journey-label { padding-top:32px; }
+  .journey-chapter {
+    min-height:calc(100svh - clamp(200px,36svh,320px));
+    padding:42px 0 65px; scroll-margin-top:calc(clamp(200px,36svh,320px) + 18px);
+  }
+  .chapter-mobile-photo { display:none; }
+  .journey-chapter h2 { font-size:clamp(33px,9.7vw,51px); margin:22px 0; }
+  .chapter-text { font-size:14px; }
+  .chapter-next { margin-top:18px; }
+}
+@media (max-width:700px) and (max-height:500px) {
+  .journey-visual { height:160px; }
+  .journey-chapter { scroll-margin-top:178px; }
+  .journey-caption p { display:none; }
+}
+@media (hover:hover) and (pointer:fine) {
+  body, a, button, [role="button"], summary {
+    cursor:url('/JulianoBolosedoces/img/cake-cursor.svg') 4 4, auto;
+  }
+  a, button, [role="button"], summary {
+    cursor:url('/JulianoBolosedoces/img/cake-cursor.svg') 4 4, pointer;
+  }
+  input, textarea { cursor:text; }
+  button:disabled { cursor:not-allowed; }
+}
+@media print {
+  .journey-visual { position:static; height:250px; margin:0; box-shadow:none; }
+}
