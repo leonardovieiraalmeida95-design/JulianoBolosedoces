@@ -2,6 +2,8 @@
 
 Site de apresentação em Next.js, TypeScript e Tailwind CSS, com galeria de 23 fotos, filtros, ampliação acessível, história do Juliano e formulário que prepara uma conversa no WhatsApp. Os contatos comerciais foram preservados da versão anterior.
 
+A página abre com a história em cinco capítulos, seguida da apresentação dos produtos. Os títulos ganham destaque conforme a rolagem; a imagem lateral muda junto com o capítulo no computador. No celular, cada etapa inclui sua imagem. A rolagem permanece livre, e as animações respeitam a preferência por movimento reduzido. O conteúdo continua legível sem JavaScript.
+
 ## Desenvolvimento
 
 `npm install` e `npm run dev`. Abra http://localhost:3000/JulianoBolosedoces/.
