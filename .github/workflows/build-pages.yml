@@ -30,6 +30,9 @@ jobs:
       - name: Export static site
         run: npm run build
 
+      - name: Check exported pages and privacy boundaries
+        run: npm run audit:site
+
       - name: Publish static export into Pages source
         run: |
           cp -R out/. .

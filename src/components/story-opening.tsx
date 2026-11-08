@@ -41,7 +41,7 @@ export default function StoryOpening() {
         if (rect.top < visualHeight + readingHeight * .58) current = index;
         const progress = Math.max(0, Math.min(1, (readingHeight * .86 - (rect.top - visualHeight)) / (readingHeight * .53)));
         panel.querySelectorAll<HTMLElement>('.story-word').forEach((word, i, words) => {
-          const reveal = motion.matches ? 1 : Math.max(0, Math.min(1, progress * 2.1 - i / words.length));
+          const reveal = (motion.matches || document.documentElement.classList.contains("motion-paused")) ? 1 : Math.max(0, Math.min(1, progress * 2.1 - i / words.length));
           word.style.opacity = String(.2 + reveal * .8);
           word.style.transform = `translateY(${(1 - reveal) * 8}px)`;
         });
@@ -51,12 +51,13 @@ export default function StoryOpening() {
     const onScroll = () => { if (!frame) frame = requestAnimationFrame(update); };
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', onScroll);
+    window.addEventListener('site-motion-change', onScroll);
     motion.addEventListener('change', onScroll);
     update();
-    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); motion.removeEventListener('change', onScroll); cancelAnimationFrame(frame); };
+    return () => { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); window.removeEventListener('site-motion-change', onScroll); motion.removeEventListener('change', onScroll); cancelAnimationFrame(frame); };
   }, []);
 
-  const visual = <aside className="journey-visual" aria-label="Criações que acompanham essa história"><div className="journey-images">{chapters.map((chapter,i)=><img key={chapter.photo} src={image(chapter.photo)} alt={chapter.alt} className={active===i?'chapter-image is-active':'chapter-image'} aria-hidden={active!==i} width="900" height="1100" loading="lazy"/>)}</div><div className="journey-caption"><span>{String(active+1).padStart(2,'0')} / 05</span><p>{chapters[active].caption}</p></div><nav className="chapter-dots" aria-label="Capítulos da história">{chapters.map((chapter,i)=><a key={chapter.date} href={`#capitulo-${i+1}`} aria-label={`Capítulo ${i+1}: ${chapter.date}`} aria-current={active===i?'step':undefined}><span/></a>)}</nav></aside>;
+  const visual = <aside className="journey-visual" aria-label="Criações que acompanham essa história"><div className="journey-images">{chapters.map((chapter,i)=><img key={chapter.photo} src={image(chapter.photo)} alt={chapter.alt} className={active===i?'chapter-image is-active':'chapter-image'} aria-hidden={active!==i} width="900" height="1100" loading="lazy"/>)}</div><div className="journey-caption"><span>{String(active+1).padStart(2,'0')} / 05</span><p>{chapters[active].caption}{active===4 && <span className="photo-credit">Foto: fabiogonzalez</span>}</p></div><nav className="chapter-dots" aria-label="Capítulos da história">{chapters.map((chapter,i)=><a key={chapter.date} href={`#capitulo-${i+1}`} aria-label={`Capítulo ${i+1}: ${chapter.date}`} aria-current={active===i?'step':undefined}><span/></a>)}</nav></aside>;
 
   return <div ref={root} className="story-opening" id="inicio">
     <section className="opening-scene" aria-labelledby="opening-title">

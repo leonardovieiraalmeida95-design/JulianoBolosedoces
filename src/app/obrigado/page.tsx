@@ -1,0 +1,5 @@
+import type {Metadata} from "next";
+import InformationPage from "@/components/information-page";
+import {localPath,whatsappLink} from "@/site-config";
+export const metadata:Metadata={title:"O próximo passo da sua encomenda",description:"Continue a conversa com o Juliano para combinar e confirmar sua encomenda.",robots:{index:false,follow:true},alternates:{canonical:'https://leonardovieiraalmeida95-design.github.io/JulianoBolosedoces/obrigado/'}};
+export default function Thanks(){return <InformationPage title="Obrigado por conhecer nosso trabalho"><p className="info-lede">O próximo passo é conversar com o Juliano para transformar sua ideia em uma encomenda.</p><h2>O pedido ainda precisa ser combinado</h2><p>Preparar a mensagem no formulário ou visitar esta página não confirma o envio de uma consulta nem a reserva de uma data. Envie a mensagem pelo WhatsApp e aguarde o retorno para acertar sabores, valores e disponibilidade.</p><a className="button button-dark" href={whatsappLink()} target="_blank" rel="noopener noreferrer">Continuar pelo WhatsApp</a><p><a href={localPath('/#criacoes')}>Explorar mais criações</a></p></InformationPage>}

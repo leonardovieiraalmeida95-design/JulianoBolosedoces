@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://leonardovieiraalmeida95-design.github.io/JulianoBolosedoces/sitemap.xml

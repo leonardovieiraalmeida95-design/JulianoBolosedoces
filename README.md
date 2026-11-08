@@ -16,4 +16,6 @@ A imagem hero-editorial.webp recebeu tratamento com IA de luz e cenário a parti
 
 O formulário não armazena dados nem confirma pedidos: prepara uma mensagem para o visitante enviar pelo WhatsApp. Datas, valores e disponibilidade são combinados diretamente com o Juliano.
 
+Revisão de 8/11/2026: GSAP/ScrollTrigger com abertura breve, opção de pular, revelações de rolagem, paralaxe discreta e controle de pausa. Fontes locais com licenças OFL, páginas de privacidade/condições/próximo passo, 404 própria, sitemap, robots e imagem de compartilhamento. `npm run audit:site` verifica a exportação; use AUDIT_BASE_URL para incluir as respostas HTTP. Consulte AUDITORIA.md para resultados, limites e identificação legal ainda pendente.
+
 Os ícones usam lucide-react, com traços consistentes e nomes acessíveis nos botões. A revisão editorial mantém títulos curtos, sem pontos finais ou quebras de linha forçadas, e preserva os marcos da história fornecida. A composição usa quebras equilibradas nos títulos e espaçamento de leitura nos parágrafos.
