@@ -1,8 +1,8 @@
 # Revisão do site — Juliano Bolos e Doces
 
-Data: 8 de novembro de 2026. Escopo: site oficial autorizado, exportação estática Next.js no GitHub Pages, lista de 20 itens fornecida por Leonardo e animações GSAP.
+Data da revisão técnica: 8 de novembro de 2026. Identificação comercial atualizada em 10 de novembro de 2026. Escopo: site oficial autorizado, exportação estática Next.js no GitHub Pages, lista de 20 itens fornecida por Leonardo e animações GSAP.
 
-Leonardo confirmou autorização para o site oficial e para as fotografias, inclusive as assinadas pelo fotógrafo. Informou que não há endereço comercial público e pediu expressamente para manter a identificação legal do fornecedor como pendência até consultar Juliano. Nenhum nome civil, razão social, CPF/CNPJ ou endereço foi inventado. A revisão é técnica e editorial: não é parecer jurídico, teste de invasão ou certificação de conformidade e não garante ausência de reclamações/processos.
+Leonardo confirmou autorização para o site oficial e para as fotografias, inclusive as assinadas pelo fotógrafo. Informou que não há endereço comercial público. Em 10 de novembro, forneceu o nome fantasia Juliano Bolos e Doces, o nome Juliano Almeida de Miranda e o CNPJ 50.340.604/0001-55 para divulgação. Esses dados foram incluídos no rodapé e nas páginas informativas. O nome pessoal é apresentado como responsável, sem presumir razão social registrada. Os dígitos verificadores do CNPJ conferem; não foi realizada consulta à Receita Federal nem certificada a situação cadastral ou a titularidade. Nenhum endereço foi inventado. A revisão é técnica e editorial: não é parecer jurídico, teste de invasão ou certificação de conformidade e não garante ausência de reclamações/processos.
 
 ## Lista de referência
 
@@ -21,11 +21,11 @@ Leonardo confirmou autorização para o site oficial e para as fotografias, incl
 | 12. Carregamento | Abertura curta com GSAP, opção de pular e limite de 2,3 s. Pulada em links diretos a seções e com movimento reduzido. Não exige espera artificial para preparar mensagens. |
 | 13. Erro no formulário | Erros acessíveis de nome vazio, data passada e quantidade inválida, com foco e aria-describedby. Dados só preparam a mensagem no navegador. |
 | 14. Obrigado | Página /obrigado/ explica o próximo passo, sem afirmar recebimento de contato ou confirmação de encomenda. A mensagem preparada continua no estado da página anterior, sem PII na URL desta página. |
-| 15. Privacidade | Página factual sobre formulário, atendimento, hospedagem, serviços externos e contato para solicitações. Identificação legal completa pendente. |
+| 15. Privacidade | Página factual sobre formulário, atendimento, hospedagem, serviços externos e contato para solicitações. Nome fantasia, responsável e CNPJ fornecidos pelo proprietário disponíveis ao final da página. |
 | 16. Condições | Consulta, personalização, ingredientes/alergênicos, conservação, confirmação, alterações e direitos, sem cláusula genérica de renúncia ou perda automática de valores. |
 | 17. Cookies | Não há cookies próprios, Analytics, pixel ou armazenamento persistente. Aviso no rodapé/página; não foi criado um banner de consentimento para rastreadores inexistentes. |
 | 18. Analytics | Não instalado: não é uma exigência geral e adicionaria tratamento de dados. Uma futura ativação depende de finalidade, identificação e revisão prévias. |
-| 19. Contato e identificação | WhatsApp e cidade presentes. Sem endereço público, conforme orientação recebida. Identificação civil/empresarial e informações aplicáveis à contratação continuam PENDENTES. |
+| 19. Contato e identificação | WhatsApp e cidade presentes. Sem endereço público, conforme orientação recebida. Nome fantasia, responsável e CNPJ fornecidos foram publicados. Endereço e demais informações aplicáveis à contratação ainda precisam de confirmação. |
 | 20. Imagens e fontes | Fotos WebP preservadas e carregadas sob demanda; hero com prioridade. Fontes WOFF2 locais Latin/Latin Extended, seis arquivos somando aproximadamente 366 KiB, com licenças OFL. |
 
 ## Animações e acessibilidade
@@ -54,7 +54,7 @@ No navegador: validação vazia e inválida, preparação correta de data/quanti
 
 ## Pendências que exigem o responsável
 
-1. **Identificação legal do fornecedor:** nome civil/razão social, identificação aplicável e dados de endereço/contato exigíveis na contratação. Não divulgar endereço residencial sem autorização, mas a ausência de loja aberta ao público não dispensa automaticamente obrigações legais. Leonardo solicitou manter esta parte pendente. O [Decreto 7.962/2013](https://legislacao.presidencia.gov.br/atos/?ano=2013&ato=61ccXTE5ENVpWT68f&numero=7962&tipo=DEC) exige transparência sobre fornecedor, produto e condições nas contratações eletrônicas; a adequação do fluxo real deve ser validada.
+1. **Dados complementares do fornecedor:** confirmar razão social registrada, situação cadastral e os dados de endereço/contato exigíveis na contratação. Nome fantasia, responsável e CNPJ fornecidos já foram publicados. Não divulgar endereço residencial sem autorização, mas a ausência de loja aberta ao público não dispensa automaticamente obrigações legais. O endereço permanece sem divulgação, conforme a informação recebida. O [Decreto 7.962/2013](https://legislacao.presidencia.gov.br/atos/?ano=2013&ato=61ccXTE5ENVpWT68f&numero=7962&tipo=DEC) exige transparência sobre fornecedor, produto e condições nas contratações eletrônicas; a adequação do fluxo real deve ser validada.
 2. Juliano deve validar a operação real de atendimento a titulares, conservação de conversas, orçamento, confirmação, cancelamento, ingredientes/alergênicos e recebimento. As páginas descrevem o fluxo implementado, mas não substituem processos internos ou revisão jurídica.
 3. A autorização das fotos foi confirmada por Leonardo; guardar os registros e validar os direitos de eventuais elementos temáticos de terceiros nas ofertas. Créditos e assinaturas de fotógrafo foram preservados. Essa autorização não foi objeto de verificação contratual independente.
 4. Qualquer adição de Analytics, pixel, pagamento, cadastro ou novo fornecedor de dados exige revisão antes de ativação. Referência: [orientação da ANPD sobre cookies](https://www.gov.br/anpd/pt-br/centrais-de-conteudo/materiais-educativos-e-publicacoes/guia_orientativo_cookies_e_protecao_de_dados_pessoais).
